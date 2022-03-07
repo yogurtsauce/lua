@@ -31,7 +31,7 @@ end
 function swing()
     i = 0
     repeat
-        robot_api.place() 
+        robot_api.place()
         robot_api.swing()
         i = i + 1
     until (i == 64)
@@ -42,6 +42,10 @@ function main()
     getCobble()
     swing()
     robot_api.select(1) -- make sand
+    robot_api.transferTo(16)
+    robot_api.select(16)
+    swing()
+    robot_api.select(1) -- make dust
     robot_api.transferTo(16)
     robot_api.select(16)
     swing()

@@ -6,23 +6,23 @@ local ic = component.inventory_controller
 
 function getCobble()
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(1,64)
+    robot_api.transferTo(1, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(2,64)
+    robot_api.transferTo(2, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(3,64)
+    robot_api.transferTo(3, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(5,64)
+    robot_api.transferTo(5, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(6,64)
+    robot_api.transferTo(6, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(7,64)
+    robot_api.transferTo(7, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(9,64)
+    robot_api.transferTo(9, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(10,64)
+    robot_api.transferTo(10, 64)
     ic.suckFromSlot(sides.top, 1, 64)
-    robot_api.transferTo(11,64)
+    robot_api.transferTo(11, 64)
     c.craft()
 end
 
@@ -32,7 +32,7 @@ function swing()
         robot_api.place()
         robot_api.swing()
         i = i + 1
-    until (i==64)
+    until (i == 64)
     robot_api.transferTo(1)
 end
 
@@ -48,9 +48,8 @@ function craftAndTransfer()
         c.craft(63)
         robot_api.dropDown()
         i = i + 1
-    until (i==10)
+    until (i == 10)
 end
-
 
 while true do
     main()
